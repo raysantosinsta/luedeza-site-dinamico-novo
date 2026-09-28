@@ -39,6 +39,12 @@ h1, h2, h3, .display { font-family: 'Outfit', sans-serif; }
 /* Captions */
 .captions { position: absolute; inset: 0; z-index: 2; pointer-events: none; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .band { position: absolute; width: 100%; text-align: center; font-size: clamp(2rem, 5vw, 4rem); font-family: 'Outfit', sans-serif; font-weight: 700; text-shadow: var(--tshadow); opacity: 0; }
+.band.left { text-align: left; padding-left: 8vw; padding-right: 50vw; }
+.band.right { text-align: right; padding-right: 8vw; padding-left: 50vw; }
+@media(max-width: 768px) {
+  .band.left { padding-right: 5vw; }
+  .band.right { padding-left: 5vw; }
+}
 .band::before {
   content: ""; position: absolute; inset: -4%; pointer-events: none;
   opacity: calc(0.25 + 0.75 * var(--k, 1));
@@ -118,8 +124,9 @@ p { font-size: 1.125rem; line-height: 1.6; color: #a0a0a0; margin-bottom: 2rem; 
     </svg>
     <div class="scrim"></div>
     <div class="captions">
-      <div class="band" data-start="0.05" data-end="0.25">A engenharia do sabor perfeito.</div>
-      <div class="band" data-start="0.35" data-end="0.65">Zero óleo. Temperatura exata.</div>
+      <div class="band" data-start="0.00" data-end="0.04" style="font-size: clamp(3rem, 8vw, 6rem); color: var(--accent);">lu&amp;deza</div>
+      <div class="band left" data-start="0.06" data-end="0.25">A engenharia do sabor perfeito.</div>
+      <div class="band right" data-start="0.35" data-end="0.65">Zero óleo. Temperatura exata.</div>
       <div class="band" data-start="0.75" data-end="0.95">Conheça a lu&amp;deza.</div>
     </div>
   </div>
