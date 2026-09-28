@@ -46,6 +46,7 @@ h1, h2, h3, .display { font-family: 'Outfit', sans-serif; }
   .band.left { padding-right: 5vw; }
   .band.right { padding-left: 5vw; }
 }
+.video-failed .band { position: relative; padding: 0 5vw !important; text-align: center !important; margin-bottom: 1.5rem; }
 .band::before {
   content: ""; position: absolute; inset: -4%; pointer-events: none;
   opacity: calc(0.25 + 0.75 * var(--k, 1));
@@ -465,10 +466,6 @@ function onScroll() {
 }
 
 const GATES = [
-  '(max-width: 720px)',
-  '(orientation: portrait) and (max-width: 1024px)',
-  '(orientation: portrait) and (pointer: coarse)',
-  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
   '(prefers-reduced-motion: reduce)'
 ];
 let scrubOn = false;
